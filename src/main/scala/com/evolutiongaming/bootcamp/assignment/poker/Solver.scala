@@ -9,7 +9,7 @@ object Solver {
     val ErrorPrefix = "Error: "
 
     line.toLowerCase.split("\\s+").toList match {
-      case "texas-holdem" :: board :: hands   => hands.sorted.mkString(" ")
+      case "texas-holdem" :: board :: hands   => ErrorPrefix + "The solution doesn't support Texas Hold'em"
       case "omaha-holdem" :: board :: hands   => ErrorPrefix + "The solution doesn't support Omaha Hold'em"
       case "five-card-draw" :: hands          => {
         val value = fromInput(hands)

@@ -1,2 +1,3 @@
 #!/bin/bash
-sbt --error 'set showSuccess := false' run
+sbt --error 'set showSuccess := false' assembly > /dev/null
+java -jar poker-evaluator.jar

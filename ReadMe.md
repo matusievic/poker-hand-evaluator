@@ -1,5 +1,30 @@
 # Poker Hand Strength Evaluator
 
+## Local run
+
+```
+./run.sh
+./run.sh < src/test/resources/input.txt
+./run.sh < src/test/resources/input.txt > output.txt
+```
+
+## Docker run
+
+Firstly, build the image:
+```
+docker build -t poker-hand-evaluator .
+```
+Then run a container:
+```
+docker run -i poker-hand-evaluator
+docker run -i poker-hand-evaluator < src/test/resources/input.txt
+docker run -i poker-hand-evaluator < src/test/resources/input.txt > output.txt
+```
+
+## Restrictions
+
+Only Five Card Draw implemented
+
 ## Task Description
 
 Your task is to develop an algorithm for sorting poker hands according to their strength.
