@@ -3,7 +3,7 @@ package com.evolutiongaming.bootcamp.assignment.poker.hand
 import com.evolutiongaming.bootcamp.assignment.poker.domain.Hand
 
 object FourOfAKind extends HandRankingCategory {
-  override val weight: Long = 7 * super.weight
+  override val weight: Long = 8 * super.weight
 
   override def calculateHandWeight(hand: Hand): Option[Long] = {
     val rankToCount = hand.groupMapReduce(_.rank)(_ => 1)(_ + _)
